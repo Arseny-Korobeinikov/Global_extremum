@@ -312,7 +312,6 @@ int main() {
 		<< "f7:" << endl << res_f7
 		<< "f8:" << endl << res_f8
 		<< "f9:" << endl << res_f9;
-	cout << f_3(0.96609) << endl;
 
 	return 0;
 }
