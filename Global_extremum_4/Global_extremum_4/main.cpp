@@ -28,11 +28,9 @@ struct Result {
         time = 0;
     }
     friend ostream& operator<<(ostream& os, const Result& r) {
-        os << "arg_extremum = " << r.x
-            << "\nobj_func_extremum = " << r.y
-            << "\ncount operations = " << r.k
-            << "\nConst L = " << r.m
-            << "\ntime = " << r.time << "s\n\n";
+        os << "arg_extremum = " << r.x << "\nobj_func_extremum = " << r.y
+            << "\ncount operation to search = " << r.k << "\ntime = " << r.time
+            << "\nConst L = " << r.m << endl << endl;
         return os;
     }
 };
@@ -235,7 +233,7 @@ int main() {
     res_f2.time = time_taken;
 
     start = chrono::high_resolution_clock::now();
-    Result res_f3 = algorithm_for_searching(0.0, 1.2, f_3, 2, max_count_operation, error_of_arg);
+    Result res_f3 = algorithm_for_searching(0.0, 1.2, f_3, r+0.5, max_count_operation, error_of_arg);
     end = chrono::high_resolution_clock::now();
     time_taken =
         chrono::duration_cast<chrono::nanoseconds>(end - start).count();
