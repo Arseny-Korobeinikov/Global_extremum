@@ -27,12 +27,9 @@ struct Result {
         m = m_;
     }
     friend ostream& operator<<(ostream& os, const Result& r) {
-        os << "arg_extremum = " << r.x
-            << "\nobj_func_extremum = " << r.y
-            << "\ncount operations = " << r.k
-            << "\nConst L = " << r.m
-            << "\ntime = " << r.time << "s\n\n";
-        return os;
+        os << "arg_extremum = " << r.x << "\nobj_func_extremum = " << r.y
+            << "\ncount operation to search = " << r.k << "\ntime = " << r.time
+            << "\nConst L = " << r.m << endl << endl;		return os;
     }
 };
 
